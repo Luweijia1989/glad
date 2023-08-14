@@ -41,7 +41,9 @@ target_include_directories(glad
 	PUBLIC include
 	${glad_include_dirs})
 target_compile_definitions(glad
-	PRIVATE GLAD_GLAPI_EXPORT_BUILD)
+        PRIVATE GLAD_GLAPI_EXPORT_BUILD)
+target_compile_definitions(glad
+       PUBLIC GLAD_STATIC)
 
 if(NOT MSVC)
 	target_compile_options(glad
